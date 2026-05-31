@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background: #020617;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+
+  background:
+    radial-gradient(circle at top, #0f172a, #020617 70%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGO CONTAINER */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  animation: floatLogo 4s ease-in-out infinite;
+}
+
+/* BIG B */
+
+.big-b {
+  font-size: 7rem;
+  font-weight: 900;
+  color: #4f9dff;
+
+  text-shadow:
+    0 0 10px rgba(79, 157, 255, 0.7),
+    0 0 30px rgba(79, 157, 255, 0.9),
+    0 0 60px rgba(79, 157, 255, 0.5);
+
+  transition: transform 1.2s ease;
+
+  animation: glowPulse 2.5s infinite alternate;
+}
+
+.logo-container.slide .big-b {
+  transform: translateX(-12px);
+}
+
+/* LETTERS */
+
+.letters {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+
+  opacity: 0;
+  transform: translateX(60px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+
+  letter-spacing: 1px;
+}
+
+.letters.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* TAGLINE */
+
+.tagline {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #94a3b8;
+
+  letter-spacing: 1px;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition:
+    opacity 2s ease,
+    transform 2s ease;
+}
+
+.tagline.fade {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ANIMATIONS */
+
+@keyframes glowPulse {
+  from {
+    text-shadow:
+      0 0 10px rgba(79, 157, 255, 0.5),
+      0 0 25px rgba(79, 157, 255, 0.7);
+  }
+
+  to {
+    text-shadow:
+      0 0 20px rgba(79, 157, 255, 1),
+      0 0 50px rgba(79, 157, 255, 1),
+      0 0 80px rgba(79, 157, 255, 0.8);
+  }
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .big-b {
+    font-size: 5rem;
+  }
+
+  .letters {
+    font-size: 2.6rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+}

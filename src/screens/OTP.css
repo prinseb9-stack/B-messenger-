@@ -1,0 +1,119 @@
+.otp-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0f172a, #020617 70%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.otp-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  padding: 40px 25px;
+  box-shadow: 0 0 25px rgba(79, 157, 255, 0.15);
+  text-align: center;
+}
+
+.otp-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.otp-title {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.otp-sub {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.otp-sub span {
+  color: #4f9dff;
+  font-weight: 600;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.otp-box {
+  width: 48px;
+  height: 56px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  caret-color: #4f9dff;
+}
+
+.otp-box:focus {
+  border-color: #4f9dff;
+  box-shadow: 0 0 0 3px rgba(79,157,255,0.15);
+}
+
+.otp-box.filled {
+  border-color: rgba(79,157,255,0.5);
+  background: rgba(79,157,255,0.08);
+}
+
+.otp-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: #4f9dff;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 20px;
+  opacity: 1;
+}
+
+.otp-btn:hover {
+  background: #2563eb;
+  transform: scale(1.02);
+}
+
+.otp-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.resend-text {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.resend-text span {
+  color: #4f9dff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.timer {
+  color: #4f9dff;
+  font-weight: 600;
+  cursor: default !important;
+}

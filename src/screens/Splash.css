@@ -1,0 +1,168 @@
+.splash {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background:
+    radial-gradient(circle at top, #0f172a, #020617 70%);
+
+  overflow: hidden;
+}
+
+/* LOGO */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* BIG B */
+
+.big-b {
+  font-size: 6rem;
+  font-weight: 900;
+
+  color: #4f9dff;
+
+  text-shadow:
+    0 0 10px rgba(79,157,255,.8),
+    0 0 30px rgba(79,157,255,.7),
+    0 0 60px rgba(79,157,255,.5);
+
+  transform: translateX(20px);
+
+  animation: moveB .7s ease forwards;
+}
+
+/* LETTERS */
+
+.letter {
+  opacity: 0;
+
+  color: #4f9dff;
+
+  font-size: 4rem;
+  font-weight: 700;
+
+  transform: translateX(15px);
+}
+
+/* LETTER TIMINGS */
+
+.m {
+  animation: showLetter .12s forwards;
+  animation-delay: .7s;
+}
+
+.e1 {
+  animation: showLetter .12s forwards;
+  animation-delay: .82s;
+}
+
+.s1 {
+  animation: showLetter .12s forwards;
+  animation-delay: .94s;
+}
+
+.s2 {
+  animation: showLetter .12s forwards;
+  animation-delay: 1.06s;
+}
+
+.e2 {
+  animation: showLetter .12s forwards;
+  animation-delay: 1.18s;
+}
+
+.n {
+  animation: showLetter .12s forwards;
+  animation-delay: 1.30s;
+}
+
+.g {
+  animation: showLetter .12s forwards;
+  animation-delay: 1.42s;
+}
+
+.e3 {
+  animation: showLetter .12s forwards;
+  animation-delay: 1.54s;
+}
+
+.r {
+  animation: showLetter .12s forwards;
+  animation-delay: 1.66s;
+}
+
+/* TAGLINE */
+
+.tagline {
+  margin-top: 20px;
+
+  color: #94a3b8;
+
+  font-size: 1rem;
+
+  opacity: 0;
+
+  animation: fadeIn .8s ease forwards;
+  animation-delay: 1.9s;
+
+  letter-spacing: 1px;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveB {
+  from {
+    transform: translateX(20px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes showLetter {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .big-b {
+    font-size: 4.8rem;
+  }
+
+  .letter {
+    font-size: 2.6rem;
+  }
+
+  .tagline {
+    font-size: .9rem;
+  }
+}
