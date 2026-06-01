@@ -1,7 +1,9 @@
 import "./Home.css";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Search, MoreVertical, MessageCircle, Phone, Users, User } from "lucide-react";
+import { connectSocket } from "../socket";
 
 const stories = [
   { id: 1, name: "My Status", avatar: "Y", color: "#4f9dff", isMe: true },
@@ -31,6 +33,10 @@ function Avatar({ name, color, size = 46 }: { name: string; color: string; size?
 
 function Home() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    connectSocket();
+  }, []);
 
   return (
     <div className="home-page">
